@@ -1,9 +1,14 @@
 package system;
 
+import models.Report;
+
 import java.util.Date;
 
-public abstract class Timer {
+public class Timer {
 
-    public abstract int createReport(String title, Date date, String text);
+    public int createReport(String title, Date date, String text) {
+        new Report();
+        return 0;
+    }
 
 }

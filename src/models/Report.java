@@ -1,5 +1,5 @@
 package models;
 
-public abstract class Report {
+public class Report {
 
 }
