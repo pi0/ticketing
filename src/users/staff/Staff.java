@@ -1,16 +1,36 @@
 package users.staff;
 
-import models.Message;
-import models.Ticket;
+import models.*;
 
-public abstract class Staff {
+import system.System;
 
-    public abstract Ticket accessTicket(int ticketID);
+import java.util.Queue;
 
-    public abstract void login();
+public class Staff {
+    private System system;
+    private Queue<Message> queue;
 
-    public abstract void sendPM(int receiverID, String text);
+    public Queue<Message> getQueue() {
+        return queue;
+    }
 
-    public abstract Message[] receivePM();
+    public Ticket accessTicket(int ticketID) {
+        return system.getTicket(ticketID);
+    }
 
+    public void login() {
+
+    }
+
+    public void sendPM(int receiverID, String text) {
+        system.sendPM(0, receiverID, text);
+    }
+
+    public Message[] receivePM() {
+        return null;
+    }
+
+    public void addToQueue(Message message) {
+
+    }
 }

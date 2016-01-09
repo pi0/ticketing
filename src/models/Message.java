@@ -1,5 +1,9 @@
 package models;
 
-public abstract class Message {
+public class Message {
+
+    public Message() {
+
+    }
 
 }

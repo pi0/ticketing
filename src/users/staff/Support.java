@@ -3,16 +3,28 @@ package users.staff;
 import models.Note;
 import models.Ticket;
 
-public abstract class Support extends Staff {
+public class Support extends Staff {
 
-    public abstract void addNote(Note note);
+    public void addNote(Ticket ticker,Note note) {
+        ticker.addNote(note);
+    }
 
-    public abstract void forwardTicket(Ticket ticket, Support support);
+    public void forwardTicket(Ticket ticket, Support support) {
+        support.getTicket();
+    }
 
-    public abstract Note[] accessNotes();
+    private void getTicket(int ticketID) {
+        //
+    }
 
-    public abstract void setTicketStatus(Ticket ticket, int status);
+    public Note[] accessNotes(Ticket ticket) {
+        return null;
+    }
 
-    public abstract void sendResponse();
+    public void setTicketStatus(Ticket ticket, int status) {
+        ticket.setStatus(status);
+    }
+
+    public void sendResponse();
 
 }
