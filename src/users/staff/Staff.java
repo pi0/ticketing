@@ -9,6 +9,7 @@ import java.util.Queue;
 public class Staff {
     private System system;
     private Queue<Message> queue;
+    private int ID;
 
     public Queue<Message> getQueue() {
         return queue;
@@ -23,7 +24,7 @@ public class Staff {
     }
 
     public void sendPM(int receiverID, String text) {
-        system.sendPM(0, receiverID, text);
+        system.sendPM(ID, receiverID, text);
     }
 
     public Message[] receivePM() {
