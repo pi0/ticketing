@@ -11,6 +11,8 @@ public class Ticket {
 
     private Note[] notes;
     private int status = STATUS_DEFAULT;
+    private TicketResponse[] Responses;
+    System system;
 
     public void setStatus(int status) {
         //
