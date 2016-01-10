@@ -24,7 +24,7 @@ public class Staff {
     }
 
     public void sendPM(int receiverID, String text) {
-        system.sendPM(ID, receiverID, text);
+        system.sendPM(id, receiverID, text);
     }
 
     public PrivateMessage[] receivePM() {
