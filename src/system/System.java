@@ -4,11 +4,12 @@ package system;
 import java.util.HashMap;
 import java.util.List;
 
+import Misc.MessageListener;
 import models.*;
 import users.staff.Staff;
 import users.user.Member;
 
-public class System {
+public class System implements MessageListener{
 
     private Timer timer;
     private List< Ticket> tickets;
@@ -56,4 +57,7 @@ public class System {
 
     }
 
+    public static boolean signupUser(String username, String email, String password) {
+        return true;
+    }
 }

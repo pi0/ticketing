@@ -1,12 +1,13 @@
 package users.staff;
 
+import Misc.MessageListener;
 import models.*;
 
 import system.System;
 
 import java.util.Queue;
 
-public class Staff {
+public class Staff implements MessageListener{
     private int id;
     protected System system;
     private Queue<PrivateMessage> queue;
@@ -37,6 +38,11 @@ public class Staff {
     }
 
     public void addToQueue(PrivateMessage privateMessage) {
+
+    }
+
+    @Override
+    public void getMessage(int id, int type, Object... params) {
 
     }
 }

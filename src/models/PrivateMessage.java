@@ -10,9 +10,6 @@ public class PrivateMessage {
     String text;
     String title;
 
-    public PrivateMessage() {
-
-    }
 
     public int getPm_id() {
         return pm_id;

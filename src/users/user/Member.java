@@ -1,8 +1,9 @@
 package users.user;
 
+import Misc.MessageListener;
 import models.StaffResponse;
 
-public class Member {
+public class Member implements MessageListener {
 
     public void login() {
 
@@ -16,4 +17,9 @@ public class Member {
         return 0;
     }
 
+    @Override
+    public void getMessage(int id, int type, Object... params) {
+
+    }
+    
 }
