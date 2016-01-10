@@ -9,10 +9,10 @@ public class Ticket {
     public static final int STATUS_DOING = 2;
     public static final int STATUS_DONE = 4;
 
-    private Note[] notes;
-    private int status = STATUS_DEFAULT;
-    private TicketResponse[] Responses;
-    System system;
+    int id;
+    Note[] notes;
+    int status = STATUS_DEFAULT;
+    StaffResponse[] staffResponses;
 
     public void setStatus(int status) {
         //

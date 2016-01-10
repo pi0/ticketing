@@ -1,5 +1,6 @@
 package models;
 
-public abstract class Department {
-
+public class Department {
+    int id;
+    String name;
 }

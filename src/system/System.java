@@ -22,8 +22,8 @@ public class System {
     }
 
     public void sendPM(int sender, int receive, String text) {
-        Message message = new Message();
-        staffs.get(receive).addToQueue(message);
+        PrivateMessage privateMessage = new PrivateMessage();
+        staffs.get(receive).addToQueue(privateMessage);
     }
 
 }

@@ -1,5 +1,8 @@
 package models;
 
-public abstract class Note {
-
+public class Note {
+    int id;
+    Ticket ticket;
+    String title;
+    String text;
 }

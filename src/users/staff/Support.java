@@ -10,7 +10,7 @@ public class Support extends Staff {
     }
 
     public void forwardTicket(Ticket ticket, Support support) {
-        support.getTicket();
+        support.getTicket(ticket.getID());
     }
 
     private void getTicket(int ticketID) {
@@ -25,6 +25,8 @@ public class Support extends Staff {
         ticket.setStatus(status);
     }
 
-    public void sendResponse();
+    public void sendResponse() {
+
+    }
 
 }

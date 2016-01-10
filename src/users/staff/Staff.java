@@ -8,9 +8,9 @@ import java.util.Queue;
 
 public class Staff {
     private System system;
-    private Queue<Message> queue;
+    private Queue<PrivateMessage> queue;
 
-    public Queue<Message> getQueue() {
+    public Queue<PrivateMessage> getQueue() {
         return queue;
     }
 
@@ -26,11 +26,11 @@ public class Staff {
         system.sendPM(0, receiverID, text);
     }
 
-    public Message[] receivePM() {
+    public PrivateMessage[] receivePM() {
         return null;
     }
 
-    public void addToQueue(Message message) {
+    public void addToQueue(PrivateMessage privateMessage) {
 
     }
 }
