@@ -28,12 +28,12 @@ public class Support extends Staff {
         ticket.addNote(note);
     }
 
-    public void forwardTicket(Ticket ticket, Support support) {
-        //
+    public void forwardTicket(int ticket_id, int support_id) {
+        system.forwardTicket(ticket_id, support_id);
     }
 
-    private void getTicket(Ticket ticket) {
-        //
+    private Ticket getTicket(int ticket_id) {
+        return system.getTicket(ticket_id);
     }
 
     public Note[] accessNotes(Ticket ticket) {

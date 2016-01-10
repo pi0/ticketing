@@ -64,6 +64,11 @@ public class System implements MessageListener{
         return false;
     }
 
+    public void forwardTicket(int ticket_id, int staff_id)
+    {
+
+    }
+
     public Ticket getTicket(int ticketid) {
         return tickets.get(ticketid);
     }
