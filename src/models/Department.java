@@ -9,6 +9,10 @@ public class Department {
     private Support[] supports;
     private Member[] members;
 
+    public Department(String name) {
+        this.name = name;
+    }
+
     public int getId() {
         return id;
     }

@@ -1,6 +1,5 @@
 package users.staff;
 
-import models.Config;
 import models.Department;
 import models.Report;
 import system.System;
@@ -13,20 +12,23 @@ public class Manager extends Staff {
         super(system, id);
     }
 
-    public void setConfig(Config config) {
-        system.getMessage(0,0,null);
+    public void setConfig(String key, String value) {
+
+        system.updateConfig(key, value);
+
     }
 
-    public Report[] getReport(Date date) {
-        return new Report[0];
+    public Report[] getReport(Date report_date) {
+        return system.getReport(report_date);
     }
 
     public void createDepartment(String name) {
+        system.createDepartment(name);
 
     }
 
     public void addSupport( int id, int authority_level, String password, String email, String username, Department department) {
-        new Support( system,  id,  authority_level,  password,  email,  username,  department);
+        system.createStaff(id, authority_level, password, email, username, department);
     }
 
 }
