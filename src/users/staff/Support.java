@@ -9,11 +9,6 @@ import java.util.Date;
 
 public class Support extends Staff {
 
-    Department department;
-    String username;
-    String email;
-    String password;
-    int authority_level;
 
     public Support(System system, int id, int authority_level, String password, String email, String username, Department department) {
         super(system, id);

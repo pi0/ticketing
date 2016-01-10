@@ -23,7 +23,6 @@ public class System implements MessageListener{
         return reports;
     }
 
-
     public List<User> getUsers() {
         return users;
     }

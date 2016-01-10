@@ -9,6 +9,11 @@ import java.util.Queue;
 
 public class Staff implements MessageListener{
     private int id;
+
+    Department department;
+    String username;
+    String email;
+
     protected System system;
     private Queue<PrivateMessage> queue;
     public Queue<PrivateMessage> getQueue() {
