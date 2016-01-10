@@ -1,19 +1,24 @@
 package users.staff;
 
+import models.Department;
 import models.Note;
 import models.Ticket;
 
+import java.util.Date;
+
 public class Support extends Staff {
 
-    public void addNote(Ticket ticker,Note note) {
-        ticker.addNote(note);
+    Department department;
+
+    public void addNote(Ticket ticket,Note note) {
+        ticket.addNote(note);
     }
 
     public void forwardTicket(Ticket ticket, Support support) {
-        support.getTicket(ticket.getID());
+        //
     }
 
-    private void getTicket(int ticketID) {
+    private void getTicket(Ticket ticket) {
         //
     }
 
@@ -25,7 +30,7 @@ public class Support extends Staff {
         ticket.setStatus(status);
     }
 
-    public void sendResponse() {
+    public void sendResponse(Ticket ticket, int staff_id, Date date, String text) {
 
     }
 

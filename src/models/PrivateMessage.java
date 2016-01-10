@@ -3,19 +3,34 @@ package models;
 import users.staff.Staff;
 
 public class PrivateMessage {
+
     int pm_id;
-    Staff receiver;
-    Staff sender;
+    private Staff sender;
+    private Staff receiver;
+    String text;
+    String title;
+
+    public PrivateMessage() {
+
+    }
 
     public int getPm_id() {
         return pm_id;
+    }
+
+    public Staff getSender() {
+        return sender;
     }
 
     public Staff getReceiver() {
         return receiver;
     }
 
-    public Staff getSender() {
-        return sender;
+    public String getText() {
+        return text;
+    }
+
+    public String getTitle() {
+        return title;
     }
 }

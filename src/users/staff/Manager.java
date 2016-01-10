@@ -5,14 +5,22 @@ import models.Report;
 
 import java.util.Date;
 
-public abstract class Manager extends Staff {
+public class Manager extends Staff {
 
-    public abstract void setConfig(Config config);
+    public void setConfig(Config config) {
 
-    public abstract Report[] getReport(Date date);
+    }
 
-    public abstract void createDepartment(String name);
+    public Report[] getReport(Date date) {
+        return new Report[0];
+    }
 
-    public abstract void addSupport(Support support);
+    public void createDepartment(String name) {
+
+    }
+
+    public void addSupport(Support support) {
+
+    }
 
 }

@@ -5,12 +5,16 @@ import java.util.HashMap;
 
 import models.*;
 import users.staff.Staff;
+import users.user.Member;
 
 public class System {
 
     private Timer timer;
     private HashMap<Integer, Ticket> tickets;
     private HashMap<Integer, Staff> staffs;
+    private HashMap<Integer, Member> members;
+    private Department[] departments;
+
 
 
     public System() {
