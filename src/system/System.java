@@ -2,21 +2,20 @@ package system;
 
 
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 
 import Misc.MessageListener;
 import models.*;
 import users.staff.Staff;
 import users.staff.Support;
-import users.user.Member;
+import users.user.User;
 
 public class System implements MessageListener{
 
     private Timer timer;
-    private List< Ticket> tickets;
+    private List<Ticket> tickets;
     private List<Staff> staffs;
-    private List<Member> members;
+    private List<User> users;
     private List<Report> reports;
 
 
@@ -25,8 +24,8 @@ public class System implements MessageListener{
     }
 
 
-    public List<Member> getMembers() {
-        return members;
+    public List<User> getUsers() {
+        return users;
     }
 
     public List<Department> getDepartments() {
@@ -45,6 +44,11 @@ public class System implements MessageListener{
         return configuration;
     }
 
+    public PrivateMessage createPm(int receiver_id, int sender_in, String text)
+    {
+        return new PrivateMessage();
+    }
+
 
 
     private List<Department> departments;
@@ -53,6 +57,11 @@ public class System implements MessageListener{
 
     public System() {
         timer = new Timer();
+    }
+
+    private boolean findStaff(int staff_id)
+    {
+        return false;
     }
 
     public Ticket getTicket(int ticketid) {
