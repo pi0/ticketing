@@ -8,11 +8,16 @@ import java.util.Queue;
 
 public class Staff {
     private int id;
-    private System system;
+    protected System system;
     private Queue<PrivateMessage> queue;
-
     public Queue<PrivateMessage> getQueue() {
         return queue;
+    }
+
+    public Staff(System system, int id) {
+        this.system = system;
+        this.id = id;
+        system.getMessage(0,0,null);
     }
 
     public Ticket accessTicket(int ticketID) {

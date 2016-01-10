@@ -3,12 +3,26 @@ package users.staff;
 import models.Department;
 import models.Note;
 import models.Ticket;
+import system.System;
 
 import java.util.Date;
 
 public class Support extends Staff {
 
     Department department;
+    String username;
+    String email;
+    String password;
+    int authority_level;
+
+    public Support(System system, int id, int authority_level, String password, String email, String username, Department department) {
+        super(system, id);
+        this.authority_level = authority_level;
+        this.password = password;
+        this.email = email;
+        this.username = username;
+        this.department = department;
+    }
 
     public void addNote(Ticket ticket,Note note) {
         ticket.addNote(note);

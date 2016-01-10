@@ -2,6 +2,7 @@ package system;
 
 
 import java.util.HashMap;
+import java.util.List;
 
 import models.*;
 import users.staff.Staff;
@@ -10,11 +11,32 @@ import users.user.Member;
 public class System {
 
     private Timer timer;
-    private HashMap<Integer, Ticket> tickets;
-    private HashMap<Integer, Staff> staffs;
-    private HashMap<Integer, Member> members;
-    private Department[] departments;
+    private List< Ticket> tickets;
+    private List<Staff> staffs;
+    private List<Member> members;
 
+    public List<Member> getMembers() {
+        return members;
+    }
+
+    public Department[] getDepartments() {
+        return departments;
+    }
+
+    public List<Staff> getStaffs() {
+        return staffs;
+    }
+
+    public List<Ticket> getTickets() {
+        return tickets;
+    }
+
+    public List<Config> getConfiguration() {
+        return configuration;
+    }
+
+    private Department[] departments;
+    private List<Config> configuration;
 
 
     public System() {
@@ -28,6 +50,10 @@ public class System {
     public void sendPM(int sender, int receive, String text) {
         PrivateMessage privateMessage = new PrivateMessage();
         staffs.get(receive).addToQueue(privateMessage);
+    }
+
+    public void getMessage(int id,int type,Object... params){
+
     }
 
 }
